@@ -9,22 +9,32 @@ Installation
 `npm install mtn-card-carousel`
 ```
 
-or
+Setup
+-----
 
 ```
-bundle install
-```
+## App module import
 
-from this directory.
+import { NgModule } from '@angular/core';
+  ---
+  ---
+import { MtnCardCarouselModule } from 'mtn-card-carousel';
+
+@NgModule({
+  imports: [   
+  ---
+    MtnCardCarouselModule
+  ],   
+  ---
+})
+export class AppModule { }
+```
 
 Usage
 -----
 
-Basic form:
-
 ```
-## Usage
+In your component bind in both the items and config properties as follows:
 
-Include `import { LightCarouselModule } from "light-carousel";` in your Ng component
-Include `import { LightCarouselModule } from "light-carousel";` in your Ng component
+<mtn-card-carousel [items]="slideItems" [config]="slideConfig"></mtn-card-carousel>
 ```
